@@ -1,0 +1,39 @@
+<head>
+  <title>dapp</title>
+</head>
+
+<body>
+  <h1>Welcome to Meteor!</h1>
+
+  {{> hello}}
+  {{> Mycontract}}
+</body>
+
+<template name="hello">
+ <p>Balance (in wei) of "0xb27B7043acfd23950899e8cE503DBD9c1Ca8a068"  {{counter}} {{TemplateVar.get "counter"}}.</p>
+</template>
+
+<template name="Mycontract">
+    <p> get the value of string variable name {{name}}  {{TemplateVar.get "name" }}</p> 
+  <!--  <p> click this button to change name </p>
+    <button class="changeName">changeName</button>
+    <p> {{changename}} {{TemplateVar.get "changeName"}}   </p> -->
+  {{> changeName}}
+  </template>
+
+<template name="changeName">
+  <form>
+    <input type="text" name="alternateName">
+    <input type="submit" value="Do it">
+  </form>
+</template>
+
+<template name="info">
+  <h2>Learn Meteor!</h2>
+  <ul>
+    <li><a href="https://www.meteor.com/try" target="_blank">Do the Tutorial</a></li>
+    <li><a href="http://guide.meteor.com" target="_blank">Follow the Guide</a></li>
+    <li><a href="https://docs.meteor.com" target="_blank">Read the Docs</a></li>
+    <li><a href="https://forums.meteor.com" target="_blank">Discussions</a></li>
+  </ul>
+</template>
